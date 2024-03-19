@@ -173,13 +173,16 @@ function concat(e){
             result.style.left = "35%";
             result.style.opacity= "0"
 
-            setInterval(imgErr, 3000)
+            setInterval(imgErr, 3000);
+
+            setInterval(errorMax, 7000);
 
         }else{
             result.style.left = "35%";
             result.style.opacity= "0"
     
-            setInterval(success, 3000)
+            setInterval(success, 3000);
+            setInterval(successImg, 7000);
         }
 
     //setInterval(resetImg, 10000)
@@ -203,12 +206,29 @@ function success(){
 }
 
 function imgErr(){
-    resultIMG.src = "recursos/img/error-nube.PNG";
+    resultIMG.src = "recursos/img/error-total.PNG";
     resultIMG.classList.add('resultOpacity');
 }
 
 function resetImg(){
     resultIMG = []
     resultIMG.classList.remove('resultOpacity');
+}
 
+function errorMax(){
+    const errorSix = document.querySelector('.error-6');
+    errorSix.classList.add('view');
+
+    setTimeout(() => {
+        errorSix.classList.remove('view');
+    }, 3000);
+}
+
+function successImg(){
+    const success = document.querySelector('.success');
+    success.classList.add('view');
+
+    setTimeout(() => {
+        success.classList.remove('view');
+    }, 3000);
 }
