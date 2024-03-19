@@ -60,18 +60,26 @@ body{
     padding: 0 100px;
 }
 
+.welcome__portada{
+    position: absolute;
+    height: 400px;
+    transition: all .3s linear;
+    margin-bottom: 500px;
+}
+
 /*  */
 .welcome__title{
     opacity: calc(var(--scroll-Title) * 15);
-    font-size: 15rem;
+    font-size: 10rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     letter-spacing: 3px;   
     z-index: 1;
+    color: #ffffffd8
 }
 
 .welcome__title.active{
-    font-size: calc( 120rem * var(--scroll-Title));
+    font-size: calc( 80rem * var(--scroll-Title));
 }
 
 .welcome__container-2{
@@ -97,7 +105,7 @@ body{
 
 
 .welcome__container-2 .welcome__container-p{
-    color: rgba(48, 28, 40);
+    color: rgb(0, 0, 0);
     opacity: 0;
     letter-spacing: 1px;
 }
@@ -137,7 +145,7 @@ body{
     font-size: 1.5rem;    
     opacity: calc(-0.8 + var(--scroll-text-2) * -5);
     transform: scale(calc(0.5 + var(--scroll-text-2) * -2));
-    color: rgba(48, 28, 40);   
+    color: rgb(0, 0, 0);   
     letter-spacing: 1px;
 }
 
@@ -389,7 +397,7 @@ body{
     left: 80%;
 }
 
-@media (width <= 1450px){
+@media (width <= 1520px){
     .variables{
         bottom: 100px;
         height: 200px;
@@ -397,6 +405,11 @@ body{
 
     .resultIMG{
         bottom:100px;
+    }
+
+    .welcome__container-2.active .welcome__container-p{    
+        font-size: 1.5rem;
+        transform: scale(calc(0.5 + var(--scroll-text) * -2));
     }
 }
 
@@ -422,5 +435,10 @@ body{
     .resultIMG{
         bottom:80px;
         width: 100PX;
+    }
+
+    .welcome__container-2.active .welcome__container-p{    
+        font-size: 1.5rem;
+        transform: scale(calc(0.5 + var(--scroll-text) * -2));
     }
 }
